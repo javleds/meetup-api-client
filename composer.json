@@ -1,0 +1,29 @@
+{
+    "name": "javleds/meetup-api-client",
+    "description": "PHP API wrapper for meetup.com",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Javier Ledezma",
+            "email": "juls0593@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Javleds\\MeetupApiClient\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Javleds\\MeetupApiClient\\Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "8.5.x-dev"
+    }
+}
