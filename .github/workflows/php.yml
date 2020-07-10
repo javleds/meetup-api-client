@@ -1,0 +1,30 @@
+name: General
+
+on:
+  push:
+    branches: [ master]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 1
+      matrix:
+        php-versions: ['7.2']
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Validate composer
+        run: composer validate
+
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress --no-suggest
+
+      - name: Validate php syntax
+        run: composer run-script phpcs
+
+      - name: Run test
+        run: composer run-script test

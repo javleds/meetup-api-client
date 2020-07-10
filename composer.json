@@ -10,7 +10,7 @@
         }
     ],
     "scripts": {
-        "phpunit": "phpunit",
+        "test": "phpunit",
         "phpcs": "php-cs-fixer fix -v --diff --dry-run",
         "phpcs-fix": "php-cs-fixer fix -v --diff"
     },
